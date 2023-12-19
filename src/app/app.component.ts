@@ -9,17 +9,19 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class AppComponent implements AfterViewInit {
   customOptions: OwlOptions = {
     loop: true,
+    autoplay: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
     dots: true,
+    lazyLoad: true,
     navSpeed: 700,
     responsive: {
       0: {
         items: 2,
       },
       400: {
-        items: 4,
+        items: 3,
       },
       740: {
         items: 5,
