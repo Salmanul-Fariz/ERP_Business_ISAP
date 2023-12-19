@@ -370,3 +370,34 @@
   </div>
 
 </section>
+
+<!-- Section 7 -->
+<section class="section_7 py-5">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-12 py-3">
+        <div class="d-flex justify-content-center">
+          <div class="heading_section">
+            <h2 class="text-center text-uppercase">Our Prestigious Clients</h2>
+          </div>
+        </div>
+      </div>
+
+      <owl-carousel-o [options]="customOptions">
+
+        @for (slide of PartnerSlidesStore; track slide.id) {
+        <ng-container>
+          <ng-template carouselSlide [id]="slide.id">
+            <div class="owl_img">
+              <img [src]="slide.src" alt="img">
+            </div>
+          </ng-template>
+        </ng-container>
+        }
+
+      </owl-carousel-o>
+
+    </div>
+  </div>
+</section>

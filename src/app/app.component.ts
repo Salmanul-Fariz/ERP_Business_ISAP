@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     lazyLoad: true,
     navSpeed: 700,
     responsive: {
@@ -108,6 +108,57 @@ export class AppComponent implements AfterViewInit {
     {
       id: '19',
       src: 'assets/images/services/bakalat-150x150.png',
+    },
+  ];
+
+  PartnerSlidesStore = [
+    {
+      id: '1',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/2-2.png',
+    },
+    {
+      id: '2',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/3-2.png',
+    },
+    {
+      id: '3',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/4-1.png',
+    },
+    {
+      id: '4',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/5-1.png',
+    },
+    {
+      id: '5',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/6-1.png',
+    },
+    {
+      id: '6',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/7-1.png',
+    },
+    {
+      id: '7',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/2-2.png',
+    },
+    {
+      id: '8',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/3-2.png',
+    },
+    {
+      id: '9',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/4-1.png',
+    },
+    {
+      id: '10',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/5-1.png',
+    },
+    {
+      id: '11',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/6-1.png',
+    },
+    {
+      id: '12',
+      src: 'https://axolonerp.com/wp-content/uploads/2022/07/7-1.png',
     },
   ];
 
