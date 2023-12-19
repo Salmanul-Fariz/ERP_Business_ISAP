@@ -255,3 +255,34 @@
     </div>
   </div>
 </section>
+
+<!-- Section 5 -->
+<section class="section_5 py-5">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-12 py-3">
+        <div class="d-flex justify-content-center">
+          <div class="heading_section">
+            <h2 class="text-center text-uppercase">Services</h2>
+          </div>
+        </div>
+      </div>
+
+      <owl-carousel-o [options]="customOptions">
+
+        @for (slide of slidesStore; track slide.id) {
+        <ng-container>
+          <ng-template carouselSlide [id]="slide.id">
+            <div class="owl_img">
+              <img [src]="slide.src" alt="img">
+            </div>
+          </ng-template>
+        </ng-container>
+        }
+
+      </owl-carousel-o>
+
+    </div>
+  </div>
+</section>
