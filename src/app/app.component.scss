@@ -413,9 +413,35 @@
         }
       }
     }
+  }
+}
 
-    .content {
-      // padding: 20px 0;
+// Footer
+footer {
+  font-size: 16px;
+  background: #000000;
+  padding: 4em 0;
+  z-index: 0;
+  color: #ababab;
+
+  .footer_logo_img {
+    padding-bottom: 18px;
+    width: 230px;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .social_icons_item {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    i {
+      font-size: 28px;
     }
   }
 }
