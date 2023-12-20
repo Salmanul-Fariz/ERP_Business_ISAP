@@ -68,6 +68,56 @@
   }
 }
 
+@media (max-width: 576px) {
+  .carousel_item {
+    .carousel_caption {
+      h2 {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .carousel_item {
+    .carousel_caption {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel_item {
+    .carousel_caption {
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel_item {
+    .carousel_caption {
+      h2 {
+        font-size: 38px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel_item {
+    .carousel_caption {
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
 // Section 2
 .section_2 {
   h6 {
