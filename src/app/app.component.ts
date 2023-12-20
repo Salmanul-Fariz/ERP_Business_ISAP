@@ -201,4 +201,9 @@ export class AppComponent implements AfterViewInit {
       image.style.transform = 'scale(1)';
     }
   }
+
+  scrollById(id: string) {
+    const element = document.getElementById(id) as HTMLElement;
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 }

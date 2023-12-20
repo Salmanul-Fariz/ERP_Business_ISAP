@@ -18,10 +18,12 @@
 
       <!-- Nav -->
       <div class="navbar-nav mx-lg-auto">
-        <span class="nav-item nav-link nav_active" aria-current="page">Home</span>
-        <span class="nav-item nav-link">Product</span>
-        <span class="nav-item nav-link">Features</span>
-        <span class="nav-item nav-link">Pricing</span>
+        <!-- nav_active -->
+        <span (click)="scrollById('home_section')" class="nav-item nav-link" aria-current="page">Home</span>
+        <span (click)="scrollById('about_us_section')" class="nav-item nav-link">About us</span>
+        <span (click)="scrollById('service_section')" class="nav-item nav-link">Service</span>
+        <span (click)="scrollById('partner_section')" class="nav-item nav-link">Partners</span>
+        <span (click)="scrollById('contact_us_section')" class="nav-item nav-link">Contact us</span>
       </div>
 
       <!-- Action -->
@@ -37,7 +39,7 @@
 
 
 <!-- Section 1 -->
-<section>
+<section id="home_section">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -229,7 +231,7 @@
 </section>
 
 <!-- Section 4 -->
-<section class="section_4 py-5">
+<section class="section_4 py-5" id="about_us_section">
   <div class="container">
     <div class="row">
 
@@ -257,7 +259,7 @@
 </section>
 
 <!-- Section 5 -->
-<section class="section_5 py-5">
+<section class="section_5 py-5" id="service_section">
   <div class="container-fluid">
     <div class="row">
 
@@ -372,7 +374,7 @@
 </section>
 
 <!-- Section 7 -->
-<section class="section_7 py-5">
+<section class="section_7 py-5" id="partner_section">
   <div class="container-fluid">
     <div class="row">
 
@@ -455,7 +457,7 @@
 </section>
 
 <!-- Section 9 -->
-<section class="section_9 py-5">
+<section class="section_9 py-5" id="contact_us_section">
   <div class="container">
     <div class="row">
 
