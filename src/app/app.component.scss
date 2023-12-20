@@ -378,3 +378,44 @@
     }
   }
 }
+
+// Section 9
+.section_9 {
+  .card_container {
+    padding: 40px 25px 25px;
+    width: 100%;
+    box-shadow: 0 0 23px 0 #cde7f1;
+    min-height: 247px;
+    border-bottom: 5px solid #474747;
+    text-align: center;
+    height: 100%;
+
+    .icon_container {
+      margin-bottom: 23px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 62px;
+      height: 62px;
+      background: #e5e5e5;
+      border-radius: 4px;
+      transform: rotate(-135deg);
+      padding: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        transform: rotate(137deg);
+
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .content {
+      // padding: 20px 0;
+    }
+  }
+}
