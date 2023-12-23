@@ -492,9 +492,23 @@ footer {
   .footer_logo_img {
     padding-bottom: 18px;
     width: 230px;
+    cursor: pointer;
 
     img {
       filter: invert(1);
+    }
+  }
+
+  li {
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: #ffffff;
     }
   }
 

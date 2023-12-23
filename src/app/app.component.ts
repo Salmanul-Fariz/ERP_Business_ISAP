@@ -184,6 +184,10 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
+  refreshPage() {
+    window.scrollTo({ top: 0 });
+  }
+
   zoomCarouselImage(id: string) {
     const image = document.getElementById(
       `carousel_image_${id}`

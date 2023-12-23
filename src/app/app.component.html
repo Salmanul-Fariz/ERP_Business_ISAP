@@ -94,7 +94,7 @@
 
 
 <!-- Section 2 -->
-<section class="section_2 py-5">
+<section class="section_2 py-5" id="erp_crm_software">
   <div class="container">
     <div class="row">
 
@@ -154,7 +154,7 @@
 
 
 <!-- Section 6 -->
-<section class="section_6">
+<section class="section_6" id="erp_crm_content">
 
   <div class="section_wrapper">
     <div class="section_items item_3">
@@ -241,7 +241,7 @@
 
 
 <!-- Section 3 -->
-<section class="section_3 py-5">
+<section class="section_3 py-5" id="erp_crm_feature">
 
   <div class="container">
     <div class="row">
@@ -564,29 +564,29 @@
 
       <div class="col-md">
         <div class="mb-4">
-          <div class="footer_logo_img">
+          <div class="footer_logo_img" (click)="refreshPage()">
             <img class="img-fluid" src="assets/images/logo/isap_one_logo_1.png" alt="">
           </div>
 
           <p>Optimize operations and amplify customer relationships with our integrated ERP & CRM service suite.</p>
 
           <ul class="social_icons_item mt-5">
-            <li><a href=""><i class="bi bi-facebook"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-facebook"></i></a>
             </li>
 
-            <li><a href=""><i class="bi bi-linkedin"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
             </li>
 
-            <li><a href=""><i class="bi bi-instagram"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-instagram"></i></a>
             </li>
 
-            <li><a href=""><i class="bi bi-whatsapp"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-whatsapp"></i></a>
             </li>
 
-            <li><a href=""><i class="bi bi-telephone"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-telephone"></i></a>
             </li>
 
-            <li><a href=""><i class="bi bi-envelope"></i></a>
+            <li><a href="" target="_blank"><i class="bi bi-envelope"></i></a>
             </li>
 
           </ul>
@@ -621,23 +621,23 @@
         <div class=" mb-4">
           <h2>Services</h2>
           <ul class="list-unstyled">
-            <li>
+            <li (click)="scrollById('erp_crm_software')">
               <span class="bi bi-arrow-right-short mr-2"></span>
               ERP & CRM Software
             </li>
-            <li>
+            <li (click)="scrollById('erp_crm_content')">
               <span class="bi bi-arrow-right-short mr-2"></span>
               What is ERP?
             </li>
-            <li>
+            <li (click)="scrollById('erp_crm_content')">
               <span class="bi bi-arrow-right-short mr-2"></span>
               What is CRM?
             </li>
-            <li>
+            <li (click)="scrollById('erp_crm_feature')">
               <span class="bi bi-arrow-right-short mr-2"></span>
               Features Of ERP & CRM
             </li>
-            <li>
+            <li (click)="scrollById('erp_crm_software')">
               <span class="bi bi-arrow-right-short mr-2"></span>
               The Importance of ERP & CRM
             </li>
@@ -671,7 +671,8 @@
           Copyright &copy;
           <script data-cfasync="false"
             src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-          <script>document.write(new Date().getFullYear());</script> iSAP Solution. All rights reserved.
+          <script>document.write(new Date().getFullYear());</script> <a href="www.isap.solutions"
+            target="_blank"><strong>iSAP Solution. </strong> </a> All rights reserved.
 
         </p>
       </div>
