@@ -445,6 +445,11 @@
     text-align: center;
     height: 100%;
 
+    &:hover {
+      cursor: default;
+      box-shadow: 0 0 46px 0 #cde7f1;
+    }
+
     .icon_container {
       margin-bottom: 23px;
       margin-right: auto;
