@@ -251,7 +251,6 @@ export class AppComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    console.log(this.FormData);
     if (this.FormData.invalid) {
       this.submitted = true;
       this.FormData.markAllAsTouched();
