@@ -1,12 +1,19 @@
-import { AfterViewInit, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -162,6 +169,22 @@ export class AppComponent implements AfterViewInit {
     },
   ];
 
+  // Form
+  FormData: FormGroup;
+  submitted = false;
+  isHaveError = false;
+  isHaveSucess = false;
+  isSubmittProcess = false;
+
+  constructor(
+    private builder: FormBuilder,
+    private changeRef: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    this.patchvalue();
+  }
+
   // Subscribe to NgbCarousel slide event on initialization
   ngAfterViewInit() {
     if (typeof document !== 'undefined') {
@@ -182,6 +205,15 @@ export class AppComponent implements AfterViewInit {
           }, 900);
         });
     }
+  }
+
+  patchvalue() {
+    this.FormData = this.builder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      subject: ['', Validators.required],
+      message: ['', Validators.required],
+    });
   }
 
   refreshPage() {
@@ -209,5 +241,62 @@ export class AppComponent implements AfterViewInit {
   scrollById(id: string) {
     const element = document.getElementById(id) as HTMLElement;
     element.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  formSubmit() {
+    this.isHaveError = false;
+    this.isHaveSucess = false;
+
+    if (this.isSubmittProcess) {
+      return;
+    }
+
+    console.log(this.FormData);
+    if (this.FormData.invalid) {
+      this.submitted = true;
+      this.FormData.markAllAsTouched();
+      return;
+    }
+
+    this.isSubmittProcess = true;
+
+    const { name, subject, email, message } = this.FormData.controls;
+
+    const templateParams = {
+      name: name.value,
+      subject: subject.value,
+      email: email.value,
+      message: message.value,
+    };
+
+    emailjs
+      .send(
+        'service_xwyv35j',
+        'template_b4errqh',
+        templateParams,
+        '0-h4ZxqO_dppeMWJl'
+      )
+      .then(
+        () => {
+          this.isHaveError = false;
+          this.isHaveSucess = true;
+
+          this.isSubmittProcess = false;
+
+          this.patchvalue();
+
+          setTimeout(() => {
+            this.isHaveSucess = false;
+
+            this.changeRef.detectChanges();
+          }, 2500);
+        },
+        () => {
+          this.isHaveError = true;
+          this.isHaveSucess = false;
+
+          this.isSubmittProcess = false;
+        }
+      );
   }
 }

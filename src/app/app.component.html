@@ -431,34 +431,46 @@
       </div>
 
       <div class="col-md-6 d-flex">
-        <form action="" id="contact-form" class="bg-light p-5 w-100 contact-form">
+        <form id="contact-form" [formGroup]="FormData" class="bg-light p-5 w-100 contact-form">
 
           <div class="form-group pb-3">
-            <label class="pb-1" for="fm_user_name">Name</label>
-            <input type="text" id="fm_user_name" required class="form-control contact_form_control"
+            <label class="pb-1" for="name">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control contact_form_control"
               placeholder="Enter Your Name">
           </div>
 
           <div class="form-group pb-3">
-            <label class="pb-1" for="fm_email">Email</label>
-            <input type="email" id="fm_email" required class="form-control contact_form_control"
+            <label class="pb-1" for="email">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control contact_form_control"
               placeholder="Enter Your Email">
           </div>
 
           <div class="form-group pb-3">
-            <label class="pb-1" for="fm_subject">Subject</label>
-            <input type="text" id="fm_subject" required class="form-control contact_form_control"
+            <label class="pb-1" for="subject">Subject</label>
+            <input type="text" id="subject" formControlName="subject" class="form-control contact_form_control"
               placeholder="Type the Subject">
           </div>
 
           <div class="form-group pb-3">
-            <label class="pb-1" for="fm_content">Content</label>
-            <textarea name id="fm_content" required cols="30" rows="7" class="form-control contact_form_control"
-              placeholder="Message"></textarea>
+            <label class="pb-1" for="content">Content</label>
+            <textarea name id="content" formControlName="message" cols="30" rows="7"
+              class="form-control contact_form_control" placeholder="Message"></textarea>
           </div>
 
-          <div class="form-group pb-3">
-            <button type="submit" class="btn_dark trans_5">Send Message</button>
+          <div class="alert alert-success" role="alert" *ngIf="isHaveSucess">
+            Successfully Send the Mail
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="isHaveError">
+            Some Error is there, Please try later
+          </div>
+
+          <div class="d-flex justify-content-start">
+            <button class="btn bg-black text-white w-25" role="status" (click)="formSubmit()">
+              <div class="spinner-border" role="status" *ngIf="isSubmittProcess">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              {{ isSubmittProcess ? 'Processing' : 'Send' }}
+            </button>
           </div>
 
         </form>
@@ -679,3 +691,16 @@
     </div>
   </div>
 </footer>
+
+<!-- Left Down Icons -->
+<div class="left_icon_container">
+  <div class="icon_swaper">
+
+    <div class="icon_content">
+      <a target="_blank" href="https://wa.me/97142462602">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+  </div>
+</div>

@@ -532,3 +532,30 @@ footer {
   width: 100%;
   height: auto;
 }
+
+// Left Whatsapp icon
+.left_icon_container {
+  position: fixed;
+  z-index: 10000;
+  bottom: 24px;
+  left: 24px;
+
+  .icon_swaper {
+    display: flex;
+
+    .icon_content {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3fb75f;
+      border-radius: 28px;
+
+      i {
+        font-size: 29px;
+        color: #fff;
+      }
+    }
+  }
+}
