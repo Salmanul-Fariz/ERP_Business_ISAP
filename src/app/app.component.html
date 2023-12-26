@@ -28,7 +28,8 @@
 
       <!-- Action -->
       <div class="d-flex align-items-lg-center me-3 mt-3 mt-lg-0">
-        <button class="btn btn-md btn-primary rounded-5 fw-bold w-full w-lg-auto demo_button">
+        <button (click)="scrollById('request_demo_section')"
+          class="btn btn-md btn-primary rounded-5 fw-bold w-full w-lg-auto demo_button">
           Request for Demo
         </button>
       </div>
@@ -419,7 +420,7 @@
 </section>
 
 <!-- Section 8 -->
-<section class="section_8 py-5">
+<section class="section_8 py-5" id="request_demo_section">
 
   <div class="container">
     <div class="row">
